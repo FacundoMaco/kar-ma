@@ -131,14 +131,20 @@ const Header = () => {
             <nav className={`hidden lg:flex items-center space-x-1 md:space-x-2 transition-all duration-700 ease-out ${isScrolled ? 'ml-0' : 'ml-0'}`}>
               <button 
                 type="button"
-                onClick={() => scrollToSection('nosotros')}
+                onClick={() => {
+                  navigate('/nosotros');
+                  setIsMenuOpen(false);
+                }}
                 className="px-4 py-2 rounded-full text-sm font-medium text-foreground/90 hover:text-primary hover:bg-primary/10 transition-all duration-300 hover:scale-105"
               >
                 Nosotros
               </button>
               <button 
                 type="button"
-                onClick={() => scrollToSection('submarcas')}
+                onClick={() => {
+                  navigate('/submarcas');
+                  setIsMenuOpen(false);
+                }}
                 className="px-4 py-2 rounded-full text-sm font-medium text-foreground/90 hover:text-primary hover:bg-primary/10 transition-all duration-300 hover:scale-105"
               >
                 Submarcas
@@ -155,14 +161,20 @@ const Header = () => {
               </button>
               <button 
                 type="button"
-                onClick={() => scrollToSection('segmentos')}
+                onClick={() => {
+                  navigate('/segmentos');
+                  setIsMenuOpen(false);
+                }}
                 className="px-4 py-2 rounded-full text-sm font-medium text-foreground/90 hover:text-primary hover:bg-primary/10 transition-all duration-300 hover:scale-105"
               >
                 Segmentos
               </button>
               <button 
                 type="button"
-                onClick={() => scrollToSection('clientes')}
+                onClick={() => {
+                  navigate('/clientes');
+                  setIsMenuOpen(false);
+                }}
                 className="px-4 py-2 rounded-full text-sm font-medium text-foreground/90 hover:text-primary hover:bg-primary/10 transition-all duration-300 hover:scale-105"
               >
                 Clientes
@@ -170,8 +182,8 @@ const Header = () => {
               <button 
                 type="button"
                 onClick={() => {
-                  const whatsappUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(WHATSAPP_DEFAULT_MESSAGE)}`;
-                  window.open(whatsappUrl, '_blank');
+                  navigate('/cotizacion');
+                  setIsMenuOpen(false);
                 }}
                 className="px-4 py-2 rounded-full text-sm font-medium text-white bg-primary hover:bg-primary/90 transition-all duration-300 hover:scale-105 shadow-lg"
               >
@@ -198,13 +210,19 @@ const Header = () => {
               <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-60"></div>
               <nav className="relative z-10 flex flex-col p-4 space-y-2">
                 <button 
-                  onClick={() => scrollToSection('nosotros')}
+                  onClick={() => {
+                    navigate('/nosotros');
+                    setIsMenuOpen(false);
+                  }}
                   className="text-left px-4 py-3 rounded-xl text-sm font-medium text-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300 hover:scale-105"
                 >
                   Nosotros
                 </button>
                 <button 
-                  onClick={() => scrollToSection('submarcas')}
+                  onClick={() => {
+                    navigate('/submarcas');
+                    setIsMenuOpen(false);
+                  }}
                   className="text-left px-4 py-3 rounded-xl text-sm font-medium text-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300 hover:scale-105"
                 >
                   Submarcas
@@ -219,21 +237,27 @@ const Header = () => {
                   Productos
                 </button>
                 <button 
-                  onClick={() => scrollToSection('segmentos')}
+                  onClick={() => {
+                    navigate('/segmentos');
+                    setIsMenuOpen(false);
+                  }}
                   className="text-left px-4 py-3 rounded-xl text-sm font-medium text-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300 hover:scale-105"
                 >
                   Segmentos
                 </button>
                 <button 
-                  onClick={() => scrollToSection('clientes')}
+                  onClick={() => {
+                    navigate('/clientes');
+                    setIsMenuOpen(false);
+                  }}
                   className="text-left px-4 py-3 rounded-xl text-sm font-medium text-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300 hover:scale-105"
                 >
                   Clientes
                 </button>
                 <button 
                   onClick={() => {
-                    const whatsappUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(WHATSAPP_DEFAULT_MESSAGE)}`;
-                    window.open(whatsappUrl, '_blank');
+                    navigate('/cotizacion');
+                    setIsMenuOpen(false);
                   }}
                   className="text-left px-4 py-3 rounded-xl text-sm font-medium text-white bg-primary hover:bg-primary/90 transition-all duration-300 hover:scale-105 shadow-lg"
                 >

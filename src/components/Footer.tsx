@@ -108,7 +108,7 @@ const Footer = () => {
               <ul className="space-y-3 text-primary-foreground/80">
                 <li>
                   <button 
-                    onClick={() => document.getElementById('nosotros')?.scrollIntoView({ behavior: 'smooth' })}
+                    onClick={() => window.location.href = '/nosotros'}
                     className="hover:text-white transition-colors text-left"
                   >
                     Nosotros
@@ -116,7 +116,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <button 
-                    onClick={() => document.getElementById('submarcas')?.scrollIntoView({ behavior: 'smooth' })}
+                    onClick={() => window.location.href = '/submarcas'}
                     className="hover:text-white transition-colors text-left"
                   >
                     Submarcas
@@ -124,7 +124,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <button 
-                    onClick={() => document.getElementById('segmentos')?.scrollIntoView({ behavior: 'smooth' })}
+                    onClick={() => window.location.href = '/segmentos'}
                     className="hover:text-white transition-colors text-left"
                   >
                     Segmentos
@@ -132,10 +132,10 @@ const Footer = () => {
                 </li>
                 <li>
                   <button 
-                    onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
+                    onClick={() => window.location.href = '/cotizacion'}
                     className="hover:text-white transition-colors text-left"
                   >
-                    Contacto
+                    Cotización
                   </button>
                 </li>
               </ul>
