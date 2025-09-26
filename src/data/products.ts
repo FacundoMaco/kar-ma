@@ -17,7 +17,7 @@ export const products: Product[] = [
     name: 'SALINA SAL INDUSTRIAL SECA FINA YODADA',
     description: 'Sal de mar fina yodada para uso en la industria alimentaria.',
     category: 'industrial',
-    image: '/assets/products/IMG-20250925-WA0085.jpg',
+    image: '/assets/products/SAL INDUSTRIAL SALINA FINA SIN YODO.jpg',
     presentation: 'Saco de 50Kg (20" x 33" blanco)',
     humidity: 'Max. 0.5%',
     brand: 'SALINA',
@@ -28,7 +28,7 @@ export const products: Product[] = [
     name: 'SAL INDUSTRIAL SALINA EXTRA FINA CON YODO',
     description: 'Sal de alta solubilidad y pureza, libre de materias extrañas, con mínimo contenido de insolubles. Sus cristales extra finos y uniformes facilitan su dosificación y rápida dilución para la elaboración de salmueras u otras aplicaciones en la industria alimentaria.',
     category: 'industrial',
-    image: '/assets/products/IMG-20250925-WA0086.jpg',
+    image: '/assets/products/SAL INDUSTRIAL SALINA EXTRA FINA CON YODO.jpg',
     presentation: 'Saco de 50 y 25 Kg',
     humidity: 'Max. 0.5%',
     brand: 'SALINA'
@@ -38,7 +38,7 @@ export const products: Product[] = [
     name: 'SAL DE GRANO SECO',
     description: 'Sal de cristales medianos y homogéneos, sin aditivos, higroscópica y soluble en agua. Usada en la industria en general, especialmente en la textil, para obtener colores más intensos y homogéneos. También es usada en las curtidurías como conservante y para restarles humedad a las pieles.',
     category: 'industrial',
-    image: '/assets/products/IMG-20250925-WA0087.jpg',
+    image: '/assets/products/SAL DE GRANO SECO.jpg',
     presentation: 'Saco de 50 y 25 Kg',
     humidity: 'Max. 0.5%',
     brand: 'SALINA'
@@ -48,7 +48,7 @@ export const products: Product[] = [
     name: 'SAL INDUSTRIAL SALINA FINA SIN YODO',
     description: 'Sal libre de materias extrañas, de granulometría fina y uniforme que facilita su dosificación. No presenta el micronutriente Yodo, por ello es exclusivamente de uso industrial, muy adecuada para optimizar procesos productivos y lograr una mayor eficiencia en equipos y procesos.',
     category: 'industrial',
-    image: '/assets/products/IMG-20250925-WA0088.jpg',
+    image: '/assets/products/SAL INDUSTRIAL SALINA FINA SIN YODO.jpg',
     presentation: 'Saco de 50 y 25 Kg',
     humidity: 'Max. 0.5%',
     brand: 'SALINA'
@@ -58,7 +58,7 @@ export const products: Product[] = [
     name: 'SAL INDUSTRIAL SALINA PARA PESCA',
     description: 'Sal libre de materias extrañas, con mínimo contenido de insolubles. En cristales homogéneos que permiten aplicar perfectamente la técnica del salado para conservar al pescado. Utilizada como preservante en la industria pesquera.',
     category: 'industrial',
-    image: '/assets/products/IMG-20250925-WA0090.jpg',
+    image: '/assets/products/SALINA SAL PARA PESCA SECA.jpg',
     presentation: 'Saco de 50 y 25 Kg',
     humidity: 'Max. 0.5%',
     brand: 'SALINA'
@@ -68,7 +68,7 @@ export const products: Product[] = [
     name: 'SAL COSTEÑITA PARA PESCA',
     description: 'Sal de pesca mediano y homogéneo, higroscópica, libre de materias extrañas y/o contaminantes. Destinada principalmente a la industria pesquera y otros procesos relacionados.',
     category: 'industrial',
-    image: '/assets/products/IMG-20250925-WA0091.jpg',
+    image: '/assets/products/SAL COSTEÑITA PARA PESCA.jpg',
     presentation: 'Saco de 50 y 25 Kg',
     humidity: 'Max. 2.5%',
     brand: 'COSTEÑITA'
@@ -78,7 +78,7 @@ export const products: Product[] = [
     name: 'SAL COSTEÑITA EN GRANO',
     description: 'Sal grano grande higroscópica, húmedo, libre de materias extrañas. Sal que conserva sus características integras de extracción, 100% natural, pasando solo por el proceso de extracción, lavado y estricta limpieza, obteniéndose cristales puros y cristalinos. Usada a nivel industrial, para tratamiento de aguas, hielo y otros procesos industriales en general.',
     category: 'industrial',
-    image: '/assets/products/IMG-20250925-WA0092.jpg',
+    image: '/assets/products/SAL COSTEÑITA PARA USO INDUSTRIAL.jpg',
     presentation: 'Saco de 50 y 25 Kg',
     humidity: 'Max. 2.5%',
     brand: 'COSTEÑITA'
@@ -88,7 +88,7 @@ export const products: Product[] = [
     name: 'SAL INDUSTRIAL COSTEÑITA FINA',
     description: 'Sal fina, higroscópica y libre de materias extrañas. Sal industrial usada en la elaboración de los concentrados y/o como suplemento mineral que completa el desarrollo de los animales, su granulometría fina permite una mezcla homogénea y rápida disolución.',
     category: 'industrial',
-    image: '/assets/products/IMG-20250925-WA0093.jpg',
+    image: '/assets/products/SAL COSTEÑITA REFINADA YODADA.jpg',
     presentation: 'Saco de 50 y 25 Kg',
     humidity: 'Max. 2.5%',
     brand: 'COSTEÑITA'
@@ -98,7 +98,7 @@ export const products: Product[] = [
     name: 'BLOQUES DE SAL REFINADA YODADA',
     description: 'Bloque de sal 100% Natural, de 10kg y 15 kg, sin adición de químicos, que proporciona a los animales un porcentaje de minerales y oligoelementos que son de gran valor nutricional para la alimentación animal, compensan las deficiencias de sus dietas alimenticias, sobre todo cuando están en régimen de pastoreo o bien cuando han sido sometidos a elevadas producciones.',
     category: 'industrial',
-    image: '/assets/products/IMG-20250925-WA0094.jpg',
+    image: '/assets/products/SAL COSTEÑITA REFINADA YODADA.jpg',
     presentation: '10 Kg. y 15 Kg',
     humidity: 'Max. 2.5%',
     brand: 'COSTEÑITA'
@@ -108,7 +108,7 @@ export const products: Product[] = [
     name: 'SAL COSTEÑITA REFINADA YODADA',
     description: 'Sal refinada y fortificada con el micronutriente yodo, higroscópica y libre de materias extrañas. Usada en la industria alimentaria, en etapas especiales del proceso productivo.',
     category: 'industrial',
-    image: '/assets/products/IMG-20250925-WA0095.jpg',
+    image: '/assets/products/SAL COSTEÑITA REFINADA YODADA.jpg',
     presentation: 'Saco de 50 y 25 Kg',
     humidity: 'Max. 2.5%',
     brand: 'COSTEÑITA'
@@ -118,7 +118,7 @@ export const products: Product[] = [
     name: 'SAL COSTEÑITA PARA USO INDUSTRIAL',
     description: 'Sal grano fino higroscópica, húmedo, libre de materias extrañas. Sal que conserva sus características integras de extracción, 100% natural, pasando solo por el proceso de extracción, lavado y estricta limpieza, obteniéndose cristales puros y cristalinos. Usada para uso industrial.',
     category: 'industrial',
-    image: '/assets/products/IMG-20250925-WA0096.jpg',
+    image: '/assets/products/SAL COSTEÑITA PARA USO INDUSTRIAL.jpg',
     presentation: 'Saco de 50 y 25 Kg',
     humidity: 'Max. 2.5%',
     brand: 'COSTEÑITA'
@@ -128,7 +128,7 @@ export const products: Product[] = [
     name: 'SALINA SAL PARA PESCA SECA',
     description: 'Sal de mar para uso en la industria alimentaria, específicamente para la conservación de pesca seca.',
     category: 'industrial',
-    image: '/assets/products/IMG-20250925-WA0085.jpg',
+    image: '/assets/products/SALINA SAL PARA PESCA SECA.jpg',
     presentation: 'Saco de 20" x 33" (blanco), 50 Kg',
     humidity: 'Max. 0.5%',
     brand: 'SALINA'
