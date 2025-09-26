@@ -8,7 +8,7 @@ Este repositorio contiene el código y los recursos de la **landing page corpora
 
 ## 🚀 Tecnologías utilizadas
 
-- **Vite + React** – Framework principal
+- **Next.js 14** – Framework principal
 - **React 18** – Librería de componentes
 - **TypeScript** – Tipado estático para mayor robustez
 - **Tailwind CSS** – Estilos modernos y responsivos
@@ -45,26 +45,5 @@ kar-ma/
 
 1. Clonar el repositorio:
    ```bash
-   git clone https://github.com/FacundoMaco/kar-ma.git
-   ```
-
-2. Instalar dependencias:
-   ```bash
-   npm install
-   ```
-
-3. Ejecutar en modo desarrollo:
-   ```bash
-   npm run dev
-   ```
-
-4. Construir para producción:
-   ```bash
-   npm run build
-   ```
-
----
-
-## 🎯 Objetivo
-
-Brindar una presencia digital moderna, confiable y escalable para clientes B2B y B2C, comunicando la solidez y tradición de una empresa familiar con más de 30 años de experiencia en la industria de la sal.
+   git clone https://github.com/tuusuario/kar-ma.git
+# Deploy fix
