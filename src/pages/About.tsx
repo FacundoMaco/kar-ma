@@ -151,7 +151,7 @@ const AboutPage = () => {
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.6, delay: 0.2 }}
                       viewport={{ once: true }}
-                      src="/public/assets/kar-ma-logo.png"
+                      src="/public/assets/gerente.png"
                       alt="Kar & Ma Logo"
                       className="w-full max-w-[200px] h-auto"
                     />
