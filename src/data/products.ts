@@ -161,7 +161,7 @@ export const products: Product[] = [
     name: 'SAL PARRILLERA',
     description: 'Sal de granulometría grande, presentada en un práctico, hermético y cómodo envase con tapa dosificadora, de uso al lado de la parrilla. Los gruesos cristales permiten dosificar mejor la sal, no sala en exceso y realzar aún más el sabor de las carnes blancas y rojas preparadas en parrilla o al horno, conservando su jugosidad.',
     category: 'comercial',
-    image: '/assets/products/placeholder.svg',
+    image: '/assets/gerenteKarma.jpeg',
     presentation: 'Bolsa/box (1 Kg) y salero cilíndrico',
     humidity: 'Max. 0.02%',
     brand: 'SALINA'
@@ -171,7 +171,7 @@ export const products: Product[] = [
     name: 'SAL SALINA GRUESA',
     description: 'Sal de mar de grano grueso, blanco, higroscópica, soluble en agua, libre de contaminantes y materias extrañas, altamente seleccionada, sin aditivos, 100% natural. Presentada en envase salero de 500 gr ergonómico que en su tapa posee un molinillo de fácil manejo manual permitiendo obtener la sal de granulometría al gusto del consumidor; como condimento y usos en general.',
     category: 'comercial',
-    image: '/assets/products/placeholder.svg',
+    image: '/assets/gerenteKarma.jpeg',
     presentation: 'Salero ergonómico de 500g con molinillo',
     humidity: 'Max. 0.02%',
     brand: 'SALINA'
@@ -181,7 +181,7 @@ export const products: Product[] = [
     name: 'SAL SALINA FINA',
     description: 'Sal de mar de granulometría fina, blanco, higroscópica, altamente seleccionada y soluble en agua, fortificada con el micronutriente yodo, libre de contaminantes y materias extrañas. Presentada en envase ergonómico salero de 500 gr. para su fácil dosificación en los alimentos, permitiendo resaltar el sabor de las comidas.',
     category: 'comercial',
-    image: '/assets/products/placeholder.svg',
+    image: '/assets/gerenteKarma.jpeg',
     presentation: 'Salero ergonómico de 500g (y versión pequeña)',
     humidity: 'Max. 0.02%',
     brand: 'SALINA'
@@ -191,7 +191,7 @@ export const products: Product[] = [
     name: 'SAL DE MESA Costeñita',
     description: 'Sal fortificada con el micronutriente yodo, higroscópica y libre de materias extrañas. Usada diariamente para sazonar los alimentos, permitiendo resaltar su sabor.',
     category: 'comercial',
-    image: '/assets/products/placeholder.svg',
+    image: '/assets/gerenteKarma.jpeg',
     presentation: 'Bolsa de 1 Kg. - 1/2 Kg',
     humidity: 'Max. 2.5%',
     brand: 'COSTEÑITA'
@@ -201,7 +201,7 @@ export const products: Product[] = [
     name: 'SAL DE COCINA Costeñita',
     description: 'Sal fortificada con el micronutriente yodo, higroscópica y libre de materias extrañas. Usada diariamente para preparar los alimentos, permitiendo resaltar su sabor.',
     category: 'comercial',
-    image: '/assets/products/placeholder.svg',
+    image: '/assets/gerenteKarma.jpeg',
     presentation: 'Bolsa de 1 Kg. - 1/2 Kg',
     humidity: 'Max. 2.5%',
     brand: 'COSTEÑITA'
