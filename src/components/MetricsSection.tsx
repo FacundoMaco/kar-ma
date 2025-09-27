@@ -1,5 +1,4 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useInView, type Variants, Easing } from "framer-motion";
 import { useRef } from "react";
 import { Factory, MapPin, Scale, Users } from "lucide-react";
 
@@ -9,7 +8,7 @@ const MetricsSection = () => {
 
   const metrics = [
     {
-      number: "30+",
+      number: "25",
       label: "Años de experiencia",
       description: "Tradición y confianza en el mercado peruano",
       icon: Factory
@@ -34,7 +33,7 @@ const MetricsSection = () => {
     }
   ];
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -44,23 +43,22 @@ const MetricsSection = () => {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
+        ease: [0.43, 0.13, 0.23, 0.96]
       }
     }
   };
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
-      {/* Background texture */}
+      {/* Background */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(0,0,0,0.15)_1px,transparent_0)] bg-[length:20px_20px]" />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -75,7 +73,7 @@ const MetricsSection = () => {
             Números que respaldan nuestra experiencia
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Tres décadas de crecimiento sostenido y compromiso con la excelencia
+            25 años de crecimiento sostenido y compromiso con la excelencia
           </p>
         </motion.div>
 

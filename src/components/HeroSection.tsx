@@ -28,7 +28,7 @@ const HeroSection = () => {
         />
         {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary/70 to-primary-dark/80" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_4px_4px,rgba(255,255,255,0.1)_1px,transparent_0)] bg-[length:50px_50px] opacity-20" />
+
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
       </div>
 
@@ -66,7 +66,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.7 }}
           className="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 max-w-4xl mx-auto text-white/90 leading-relaxed px-4"
         >
-          Consorcio con más de 30 años de experiencia produciendo sal para empresas e industria local
+          Consorcio con 25 años de experiencia produciendo sal para empresas e industria local
         </motion.p>
 
         <div className="flex flex-col items-center gap-8">

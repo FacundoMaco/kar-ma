@@ -28,7 +28,7 @@ const AboutSection = () => {
               <CardContent className="p-8">
                 <h3 className="text-2xl font-semibold text-primary mb-6">Nuestra Historia</h3>
                 <p className="text-lg leading-relaxed mb-6">
-                  Durante más de tres décadas, Kar & Ma S.A.C. ha sido un pilar fundamental en la industria salinera peruana. 
+                  Durante 25 años, Kar & Ma S.A.C. ha sido un pilar fundamental en la industria salinera peruana. 
                   Nacimos en el norte del país con la visión de proporcionar sal de la más alta calidad tanto para el consumo 
                   retail como para las grandes industrias nacionales.
                 </p>
@@ -87,7 +87,7 @@ const AboutSection = () => {
         {/* Línea del tiempo */}
         <div className="max-w-4xl mx-auto">
           <h3 className="text-2xl font-semibold text-center text-primary mb-12">
-            30 Años de Trayectoria
+            25 Años de Trayectoria
           </h3>
           <div className="space-y-8">
             <Reveal direction="left" delay={0.2} width="100%">

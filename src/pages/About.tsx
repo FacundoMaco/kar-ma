@@ -61,7 +61,7 @@ const AboutPage = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8"
             >
-              Más de 30 años de tradición salinera del norte peruano, construyendo confianza y calidad
+              25 años de tradición salinera del norte peruano, construyendo confianza y calidad
             </motion.p>
             
             <motion.div
@@ -83,8 +83,88 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Historia Section */}
+      {/* Mensaje de la Gerente General */}
       <section className="py-20 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(0,0,0,0.1)_50%,transparent_75%)] bg-[length:20px_20px]" />
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+              Bienvenidos a KAR&MA SAC
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Mensaje de nuestra Gerente General
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <Card className="overflow-hidden border-0 shadow-xl bg-white">
+              <CardContent className="p-8 md:p-12">
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  <div>
+                    <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
+                      Con profundo orgullo, compartimos con ustedes nuestros 25 años, una edad cargada de significado, 
+                      y que invita a reflexionar sobre nuestros orígenes, nuestras ejecutorias y nuestro porvenir. 
+                      La imagen de gran empresa que proyectamos hoy, que contrasta con la pequeña y visionaria empresa 
+                      del inicio que va de la mano del esfuerzo de nuestra gente.
+                    </p>
+                    <p className="text-lg leading-relaxed mb-8 text-muted-foreground">
+                      KAR & MA es una empresa peruana comprometida con llevar la mejor calidad de sal, las cuales, 
+                      están certificados por el Ministerio de Salud y Digesa; a la vez teniendo como respaldo el 
+                      sistema HACCP.
+                    </p>
+                    <div className="flex flex-col items-end">
+                      <p className="text-xl font-bold text-primary mb-1">Carmen Lam</p>
+                      <p className="text-muted-foreground">Gerente General</p>
+                    </div>
+                  </div>
+                  <div className="relative flex flex-col gap-6 items-center">
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.6 }}
+                      viewport={{ once: true }}
+                      className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/20 flex items-center justify-center">
+                        <Users className="w-16 h-16 text-primary/50" />
+                      </div>
+                      {/* Aquí se colocará la foto de la Gerente General */}
+                    </motion.div>
+                    
+                    <motion.img
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.6, delay: 0.2 }}
+                      viewport={{ once: true }}
+                      src="/public/assets/kar-ma-logo.png"
+                      alt="Kar & Ma Logo"
+                      className="w-full max-w-[200px] h-auto"
+                    />
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Historia Section */}
+      <section className="py-20 bg-gray-50 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(0,0,0,0.1)_50%,transparent_75%)] bg-[length:20px_20px]" />
         </div>
@@ -101,7 +181,7 @@ const AboutPage = () => {
               Nuestra Historia
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Una trayectoria de más de tres décadas en la industria salinera peruana
+              Una trayectoria de 25 años en la industria salinera peruana
             </p>
           </motion.div>
 
@@ -120,7 +200,7 @@ const AboutPage = () => {
                       Desde el Norte del Perú
                     </h3>
                     <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                      Durante más de tres décadas, Kar & Ma S.A.C. ha sido un pilar fundamental en la industria salinera peruana. 
+                      Durante 25 años, Kar & Ma S.A.C. ha sido un pilar fundamental en la industria salinera peruana. 
                       Nacimos en el norte del país con la visión de proporcionar sal de la más alta calidad tanto para el consumo 
                       retail como para las grandes industrias nacionales.
                     </p>
@@ -132,7 +212,7 @@ const AboutPage = () => {
                   <div className="relative">
                     <div className="bg-gradient-to-br from-primary/10 to-primary/20 rounded-2xl p-8 text-center">
                       <Calendar className="w-16 h-16 text-primary mx-auto mb-4" />
-                      <div className="text-4xl font-bold text-primary mb-2">30+</div>
+                      <div className="text-4xl font-bold text-primary mb-2">25</div>
                       <div className="text-lg font-medium text-primary">Años de experiencia</div>
                     </div>
                   </div>
@@ -140,6 +220,87 @@ const AboutPage = () => {
               </CardContent>
             </Card>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Quiénes Somos */}
+      <section className="py-20 bg-white relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src="/assets/north-peru.jpg" 
+            alt="Salinas de Kar & Ma" 
+            className="w-full h-full object-cover opacity-10"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/20" />
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+              Quiénes Somos
+            </h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <Card className="h-full border-0 shadow-xl bg-white/95 backdrop-blur">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-bold text-primary mb-6">Nuestra Esencia</h3>
+                  <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
+                    Somos una empresa peruana con 25 años de experiencia en producción y comercialización 
+                    de sal para consumo humano, industrial y animal, con altos estándares de calidad 
+                    acordes a las necesidades de nuestros clientes.
+                  </p>
+                  <p className="text-lg leading-relaxed text-muted-foreground">
+                    Somos la única empresa del norte del Perú que cuenta con terrenos propios salineros 
+                    donde la acción del sol y de los vientos favorece la evaporación del agua de mar 
+                    hasta la saturación y cristalización de la sal marina siendo posteriormente cultivada 
+                    para obtener el 99.9% de pureza.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <Card className="h-full border-0 shadow-xl bg-white/95 backdrop-blur">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-bold text-primary mb-6">Nuestras Marcas</h3>
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-xl font-bold text-primary mb-3">SAL SALINA</h4>
+                      <p className="text-muted-foreground">
+                        Sal con 0.5% máx de humedad, secada y esterilizada en hornos a 120-140°C, 
+                        en las líneas de consumo humano e industrial.
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-primary mb-3">SAL COSTEÑITA</h4>
+                      <p className="text-muted-foreground">
+                        Sal con 2.5% máx de humedad, a la que se le aplica el método de secado u oreo natural, 
+                        en las 3 líneas de sal de consumo humano, industrial y animal.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -254,7 +415,7 @@ const AboutPage = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-              30 Años de Trayectoria
+              25 Años de Trayectoria
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Hitos importantes en nuestra historia empresarial
@@ -304,6 +465,87 @@ const AboutPage = () => {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Política de la Empresa */}
+      <section className="py-20 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(0,0,0,0.1)_50%,transparent_75%)] bg-[length:20px_20px]" />
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+              Política de la Empresa
+            </h2>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="max-w-6xl mx-auto"
+          >
+            <Card className="overflow-hidden border-0 shadow-xl bg-white">
+              <CardContent className="p-8 md:p-12">
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  <div>
+                    <p className="text-lg leading-relaxed mb-8 text-muted-foreground">
+                      Es política de KAR & MA SAC. asegurar la satisfacción plena de las necesidades 
+                      de sus clientes y consumidores, entregándoles productos sanos, procesados con 
+                      tecnología apropiada y con personal competente y comprometido con la mejora 
+                      continua, conduciendo sus operaciones de una manera segura y preservando la 
+                      salud ocupacional de sus colaboradores.
+                    </p>
+                    <div className="grid grid-cols-2 gap-6">
+                      <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        className="flex flex-col items-center p-4 bg-primary/5 rounded-xl"
+                      >
+                        <div className="w-20 h-20 mb-4">
+                          <img
+                            src="/assets/haccp.png"
+                            alt="Certificación HACCP"
+                            className="w-full h-full object-contain"
+                          />
+                        </div>
+                        <span className="text-primary font-semibold">Certificación HACCP</span>
+                      </motion.div>
+                      <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        className="flex flex-col items-center p-4 bg-primary/5 rounded-xl"
+                      >
+                        <div className="w-20 h-20 mb-4">
+                          <img
+                            src="/assets/bpm.png"
+                            alt="Certificación BPM"
+                            className="w-full h-full object-contain"
+                          />
+                        </div>
+                        <span className="text-primary font-semibold">Certificación BPM</span>
+                      </motion.div>
+                    </div>
+                  </div>
+                  <div className="relative h-full min-h-[300px] rounded-xl overflow-hidden">
+                    <img
+                      src="/public/assets/industrial-facility.jpg"
+                      alt="Instalaciones de Kar & Ma"
+                      className="w-full h-full object-cover rounded-xl"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
         </div>
       </section>
 
