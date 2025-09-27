@@ -285,7 +285,7 @@ const ProductsPage = () => {
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
-                        target.src = '/assets/gerenteKarma.jpeg';
+                        target.src = '/assets/product-placeholder.svg';
                       }}
                     />
                     
