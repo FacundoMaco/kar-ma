@@ -18,10 +18,7 @@ const Footer = () => {
 
   return (
 <footer className="bg-gradient-to-br from-primary via-primary to-primary-dark text-primary-foreground relative overflow-hidden">
-  {/* Textura de fondo */}
-  <div className="absolute inset-0 opacity-10">
-    <div className="absolute inset-0 bg-[radial-gradient(circle_at_3px_3px,rgba(255,255,255,0.1)_1px,transparent_0)] bg-[length:40px_40px]" />
-  </div>
+
 
       <div className="container mx-auto px-4 relative z-10">
         {/* CTA Section */}
@@ -69,7 +66,7 @@ const Footer = () => {
                 />
               </div>
               <p className="text-primary-foreground/80 mb-6 max-w-lg text-lg leading-relaxed">
-                Consorcio peruano con más de 30 años de experiencia en la producción 
+                Consorcio peruano con 25 años de experiencia en la producción 
                 de sal retail e industrial, respaldado por la confianza del pueblo del norte.
               </p>
               

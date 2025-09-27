@@ -365,7 +365,7 @@ const ClientsPage = () => {
                 description: "En todo el país"
               },
               {
-                number: "30+",
+                number: "25",
                 label: "Años de Experiencia",
                 description: "Sirviendo al mercado"
               },

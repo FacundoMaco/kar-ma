@@ -33,7 +33,7 @@ kar-ma/
 ## 🌐 Secciones principales
 
 - **Inicio** – Presentación de la empresa  
-- **Nosotros** – Historia y trayectoria de 30 años  
+- **Nosotros** – Historia y trayectoria de 25 años  
 - **Productos** – División Retail & Industrial  
 - **Marcas** – Submarcas destacadas: *Salina* y *Norteñita*  
 - **Clientes & Partners** – Confianza del pueblo y aliados estratégicos  
