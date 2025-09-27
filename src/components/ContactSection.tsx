@@ -177,6 +177,19 @@ const ContactSection = () => {
             </Card>
           </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="text-center mt-16"
+        >
+          <p className="text-xl text-primary max-w-3xl mx-auto leading-relaxed">
+            Nos comprometemos a responder todas las solicitudes de cotización en un máximo de 24 horas hábiles. 
+            Nuestro equipo comercial analizará sus requerimientos específicos para ofrecerle la mejor propuesta.
+          </p>
+        </motion.div>
       </div>
     </section>
   );

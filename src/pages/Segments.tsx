@@ -372,11 +372,6 @@ const SegmentsPage = () => {
                           industrial: "Controlada según proceso"
                         },
                         {
-                          aspect: "Certificaciones",
-                          comercial: "DIGESA, alimentarias",
-                          industrial: "Técnicas, ISO"
-                        },
-                        {
                           aspect: "Volumen de venta",
                           comercial: "Menor volumen",
                           industrial: "Alto volumen"

@@ -1,12 +1,20 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { WHATSAPP_DEFAULT_MESSAGE, WHATSAPP_PHONE } from "@/config";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const isActive = (path: string) => {
+    if (path === '/' && location.pathname === '/') return true;
+    if (path !== '/' && location.pathname.startsWith(path)) return true;
+    return false;
+  };
 
   // Detectar scroll para cambiar el estado del navbar
   useEffect(() => {
@@ -47,8 +55,9 @@ const Header = () => {
   return (
     <header 
       className={`
-        fixed z-50 left-0 right-0
-        ${isScrolled ? 'top-2 md:top-4' : 'top-0'}
+        fixed z-50 left-0 right-0 transition-all duration-700 ease-out
+        ${isScrolled ? 'top-3 md:top-5 scale-95' : 'top-0 scale-100'}
+        transform-gpu
       `}
     >
       {/* Dynamic Island Navbar con Liquid Glass Effect */}
@@ -58,14 +67,16 @@ const Header = () => {
           width: isScrolled ? 'calc(100% - 1rem)' : '100%',
           margin: '0 auto',
           transformOrigin: 'center top',
-          maxWidth: isScrolled ? '700px' : 'none'
+          maxWidth: isScrolled ? '1200px' : 'none',
+          transform: isScrolled ? 'scale(0.98)' : 'scale(1)',
         }}
         className={`
-          relative overflow-hidden will-change-[width,border-radius]
+          relative overflow-hidden will-change-[width,border-radius,transform]
           motion-reduce:transition-none motion-safe:transition-all
+          origin-top
           ${isScrolled 
-            ? 'bg-background/85 backdrop-blur-2xl border border-white/25 shadow-2xl shadow-black/25 rounded-[28px]' 
-            : 'bg-background/95 backdrop-blur-2xl border border-white/30 shadow-2xl shadow-black/30 rounded-none'
+            ? 'bg-background/85 backdrop-blur-2xl border border-white/25 shadow-2xl shadow-black/25 rounded-[32px] scale-95' 
+            : 'bg-background/95 backdrop-blur-2xl border border-white/30 shadow-2xl shadow-black/30 rounded-none scale-100'
           }
           ${isMenuOpen ? 'rounded-3xl' : ''}
         `}
@@ -88,9 +99,9 @@ const Header = () => {
             className={`
               flex items-center justify-between
               motion-reduce:transition-none motion-safe:transition-all
-              ${isScrolled ? 'px-4 md:px-6 py-2 md:py-3' : 'px-4 md:px-8 py-3 md:py-4'}
+              ${isScrolled ? 'px-6 md:px-8 py-2 md:py-3' : 'px-6 md:px-10 py-3 md:py-5'}
             `}>
-            {/* Logo con animación - visible siempre pero con diferentes tamaños */}
+            {/* Logo */}
             <div 
               style={{
                 transition: "all 800ms cubic-bezier(0.4, 0, 0.2, 1)"
@@ -119,8 +130,9 @@ const Header = () => {
                       position: "relative"
                     }}
                     className={`
-                      will-change-[height] motion-reduce:transition-none motion-safe:transition-all
-                      ${isScrolled ? 'h-12 md:h-16' : 'h-16 md:h-20'} w-auto object-contain
+                      will-change-[height,transform] motion-reduce:transition-none motion-safe:transition-all
+                      transform-gpu transition-transform duration-700
+                      ${isScrolled ? 'h-12 md:h-16 scale-95' : 'h-16 md:h-20 scale-100'} w-auto object-contain
                     `}
                   />
                 </div>
@@ -132,10 +144,27 @@ const Header = () => {
               <button 
                 type="button"
                 onClick={() => {
+                  navigate('/');
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                  setIsMenuOpen(false);
+                }}
+                className={`
+                  px-4 py-2 rounded-full text-sm font-medium transition-all duration-500 hover:scale-105
+                  text-foreground/90 ${isActive('/') ? 'bg-primary/10 text-primary' : 'hover:text-primary hover:bg-primary/10'}
+                `}
+              >
+                Inicio
+              </button>
+              <button 
+                type="button"
+                onClick={() => {
                   navigate('/nosotros');
                   setIsMenuOpen(false);
                 }}
-                className="px-4 py-2 rounded-full text-sm font-medium text-foreground/90 hover:text-primary hover:bg-primary/10 transition-all duration-300 hover:scale-105"
+                className={`
+                  px-4 py-2 rounded-full text-sm font-medium transition-all duration-500 hover:scale-105
+                  text-foreground/90 ${isActive('/nosotros') ? 'bg-primary/10 text-primary' : 'hover:text-primary hover:bg-primary/10'}
+                `}
               >
                 Nosotros
               </button>
@@ -145,17 +174,23 @@ const Header = () => {
                   navigate('/submarcas');
                   setIsMenuOpen(false);
                 }}
-                className="px-4 py-2 rounded-full text-sm font-medium text-foreground/90 hover:text-primary hover:bg-primary/10 transition-all duration-300 hover:scale-105"
+                className={`
+                  px-4 py-2 rounded-full text-sm font-medium transition-all duration-500 hover:scale-105
+                  text-foreground/90 ${isActive('/submarcas') ? 'bg-primary/10 text-primary' : 'hover:text-primary hover:bg-primary/10'}
+                `}
               >
                 Submarcas
               </button>
-              <button 
+              <button
                 type="button"
                 onClick={() => {
                   navigate('/productos');
                   setIsMenuOpen(false);
                 }}
-                className="px-4 py-2 rounded-full text-sm font-medium text-foreground/90 hover:text-primary hover:bg-primary/10 transition-all duration-300 hover:scale-105"
+                className={`
+                  px-4 py-2 rounded-full text-sm font-medium transition-all duration-500 hover:scale-105
+                  text-foreground/90 ${isActive('/productos') ? 'bg-primary/10 text-primary' : 'hover:text-primary hover:bg-primary/10'}
+                `}
               >
                 Productos
               </button>
@@ -165,17 +200,23 @@ const Header = () => {
                   navigate('/segmentos');
                   setIsMenuOpen(false);
                 }}
-                className="px-4 py-2 rounded-full text-sm font-medium text-foreground/90 hover:text-primary hover:bg-primary/10 transition-all duration-300 hover:scale-105"
+                className={`
+                  px-4 py-2 rounded-full text-sm font-medium transition-all duration-500 hover:scale-105
+                  text-foreground/90 ${isActive('/segmentos') ? 'bg-primary/10 text-primary' : 'hover:text-primary hover:bg-primary/10'}
+                `}
               >
                 Segmentos
               </button>
-              <button 
+              <button
                 type="button"
                 onClick={() => {
                   navigate('/clientes');
                   setIsMenuOpen(false);
                 }}
-                className="px-4 py-2 rounded-full text-sm font-medium text-foreground/90 hover:text-primary hover:bg-primary/10 transition-all duration-300 hover:scale-105"
+                className={`
+                  px-4 py-2 rounded-full text-sm font-medium transition-all duration-500 hover:scale-105
+                  text-foreground/90 ${isActive('/clientes') ? 'bg-primary/10 text-primary' : 'hover:text-primary hover:bg-primary/10'}
+                `}
               >
                 Clientes
               </button>
@@ -209,6 +250,16 @@ const Header = () => {
             <div id="mobile-menu" className="lg:hidden border-t border-white/20 bg-background/90 backdrop-blur-2xl rounded-b-3xl shadow-xl">
               <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-60"></div>
               <nav className="relative z-10 flex flex-col p-4 space-y-2">
+                <button 
+                  onClick={() => {
+                    navigate('/');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    setIsMenuOpen(false);
+                  }}
+                  className="text-left px-4 py-3 rounded-xl text-sm font-medium text-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300 hover:scale-105"
+                >
+                  Inicio
+                </button>
                 <button 
                   onClick={() => {
                     navigate('/nosotros');
