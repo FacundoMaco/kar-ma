@@ -536,7 +536,7 @@ const AboutPage = () => {
                   </div>
                   <div className="relative h-full min-h-[300px] rounded-xl overflow-hidden">
                     <img
-                      src="/public/assets/industrial-facility.jpg"
+                      src="/public/assets/instalaciones.jpg"
                       alt="Instalaciones de Kar & Ma"
                       className="w-full h-full object-cover rounded-xl"
                     />
