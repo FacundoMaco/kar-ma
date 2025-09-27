@@ -133,28 +133,14 @@ const AboutPage = () => {
                     </div>
                   </div>
                   <div className="relative flex flex-col gap-6 items-center">
-                    <motion.div
+                    <motion.img
                       initial={{ opacity: 0, scale: 0.9 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.6 }}
                       viewport={{ once: true }}
-                      className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl"
-                    >
-                      <img
-                        src="/assets/gerenteKarma.jpeg"
-                        alt="Carmen Lam - Gerente General"
-                        className="w-full h-full object-cover"
-                      />
-                    </motion.div>
-                    
-                    <motion.img
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.6, delay: 0.2 }}
-                      viewport={{ once: true }}
                       src="/assets/gerenteKarma.jpeg"
-                      alt="Kar & Ma Logo"
-                      className="w-full max-w-[200px] h-auto"
+                      alt="Carmen Lam - Gerente General"
+                      className="w-full max-w-[300px] h-auto rounded-lg shadow-xl border-4 border-primary/20"
                     />
                   </div>
                 </div>
