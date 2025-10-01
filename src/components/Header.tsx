@@ -179,7 +179,7 @@ const Header = () => {
                   text-foreground/90 ${isActive('/submarcas') ? 'bg-primary/10 text-primary' : 'hover:text-primary hover:bg-primary/10'}
                 `}
               >
-                Submarcas
+                Marcas
               </button>
               <button
                 type="button"
@@ -276,7 +276,7 @@ const Header = () => {
                   }}
                   className="text-left px-4 py-3 rounded-xl text-sm font-medium text-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300 hover:scale-105"
                 >
-                  Submarcas
+                  Marcas
                 </button>
                 <button 
                   onClick={() => {

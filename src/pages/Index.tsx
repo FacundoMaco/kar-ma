@@ -15,12 +15,34 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
+        {/* Separator */}
+        <div className="relative">
+          <div className="h-10 w-full bg-gradient-to-b from-transparent via-primary/5 to-transparent rounded-full blur" />
+        </div>
         <MetricsSection />
+        <div className="relative">
+          <div className="h-10 w-full bg-gradient-to-b from-transparent via-primary/5 to-transparent rounded-full blur" />
+        </div>
         <ProductsSection />
+        <div className="relative">
+          <div className="h-10 w-full bg-gradient-to-b from-transparent via-primary/5 to-transparent rounded-full blur" />
+        </div>
         <AboutSection />
+        <div className="relative">
+          <div className="h-10 w-full bg-gradient-to-b from-transparent via-primary/5 to-transparent rounded-full blur" />
+        </div>
         <SubbrandsSection />
+        <div className="relative">
+          <div className="h-10 w-full bg-gradient-to-b from-transparent via-primary/5 to-transparent rounded-full blur" />
+        </div>
         <BusinessSegmentsSection />
+        <div className="relative">
+          <div className="h-10 w-full bg-gradient-to-b from-transparent via-primary/5 to-transparent rounded-full blur" />
+        </div>
         <ClientsSection />
+        <div className="relative">
+          <div className="h-10 w-full bg-gradient-to-b from-transparent via-primary/5 to-transparent rounded-full blur" />
+        </div>
         <ContactSection />
       </main>
       <Footer />

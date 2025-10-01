@@ -47,12 +47,12 @@ const ProductModal = ({ product, isOpen, onClose }: ProductModalProps) => {
           <div className="space-y-4">
             <div className="relative">
               <img
-                src={product.image}
+                src={product.image || '/assets/product-placeholder.svg'}
                 alt={product.name}
                 className="w-full h-80 object-cover rounded-lg shadow-lg"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
-                  target.src = '/assets/placeholder.svg';
+                  target.src = '/assets/product-placeholder.svg';
                 }}
               />
               {product.featured && (

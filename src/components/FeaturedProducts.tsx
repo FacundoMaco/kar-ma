@@ -66,10 +66,27 @@ const FeaturedProducts = () => {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
               whileHover={{ y: -8 }}
-              className="group"
+              className="group relative"
             >
-              <Card className="h-full overflow-visible border-0 shadow-lg hover:shadow-2xl transition-all duration-500 bg-white flex flex-col">
+              <motion.div
+                initial={{ y: 0, opacity: 0.25 }}
+                whileInView={{ opacity: 0.35 }}
+                whileHover={{ y: -4, opacity: 0.5 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="absolute -inset-0.5 bg-gradient-to-br from-primary/30 via-emerald-400/30 to-primary/30 rounded-3xl blur"
+              />
+              <Card className="relative h-full overflow-hidden rounded-3xl border border-white/20 bg-white/70 backdrop-blur-xl shadow-xl hover:shadow-2xl transition-all duration-500 flex flex-col">
                 <div className="relative h-64 bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
+                  <img
+                    src={product.image || '/assets/product-placeholder.svg'}
+                    alt={product.name}
+                    className="absolute inset-0 w-full h-full object-cover"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = '/assets/product-placeholder.svg';
+                    }}
+                  />
                   {product.featured && (
                     <div className="absolute top-4 left-4 z-10">
                       <div className="bg-primary text-white px-3 py-1 rounded-full text-sm font-medium flex items-center gap-1">
