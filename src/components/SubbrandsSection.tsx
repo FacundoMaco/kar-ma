@@ -72,6 +72,8 @@ const SubbrandsSection = () => {
                     <div className="w-16 h-16 bg-white/90 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                       {brand.logo ? (
                         <img 
+                          loading="lazy"
+                          decoding="async"
                           src={brand.logo} 
                           alt={`Logo ${brand.name}`} 
                           className="w-12 h-12 object-contain"

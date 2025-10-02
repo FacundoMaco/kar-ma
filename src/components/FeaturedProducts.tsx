@@ -70,14 +70,25 @@ const FeaturedProducts = () => {
             >
               <motion.div
                 initial={{ y: 0, opacity: 0.25 }}
-                whileInView={{ opacity: 0.35 }}
-                whileHover={{ y: -4, opacity: 0.5 }}
+                whileInView={{ opacity: 0.3 }}
+                whileHover={{ y: -4, opacity: 0.45 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="absolute -inset-0.5 bg-gradient-to-br from-primary/30 via-emerald-400/30 to-primary/30 rounded-3xl blur"
+                className="absolute -inset-0.5 bg-gradient-to-br from-primary/20 via-emerald-400/20 to-primary/20 rounded-3xl blur-sm md:blur"
               />
               <Card className="relative h-full overflow-hidden rounded-3xl border border-white/20 bg-white/70 backdrop-blur-xl shadow-xl hover:shadow-2xl transition-all duration-500 flex flex-col">
                 <div className="relative h-64 bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
+                  <img
+                    loading="lazy"
+                    decoding="async"
+                    src={product.image || '/assets/product-placeholder.svg'}
+                    alt={product.name}
+                    className="absolute inset-0 w-full h-full object-cover md:group-hover:scale-105 transition-transform duration-500"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = '/assets/product-placeholder.svg';
+                    }}
+                  />
                   <img
                     src={product.image || '/assets/product-placeholder.svg'}
                     alt={product.name}

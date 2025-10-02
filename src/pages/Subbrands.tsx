@@ -177,6 +177,8 @@ const SubbrandsPage = () => {
                           {brand.logo ? (
                             <div className="text-center">
                               <img 
+                                loading="lazy"
+                                decoding="async"
                                 src={brand.logo} 
                                 alt={`Logo ${brand.name}`} 
                                 className="w-32 h-32 object-contain mx-auto mb-6 hover:scale-110 transition-transform duration-300"

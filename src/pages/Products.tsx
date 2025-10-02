@@ -280,9 +280,11 @@ const ProductsPage = () => {
                     )}
                     
                     <img
+                      loading="lazy"
+                      decoding="async"
                       src={product.image || '/assets/product-placeholder.svg'}
                       alt={product.name}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="w-full h-full object-cover transition-transform duration-500 md:group-hover:scale-105"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
                         target.src = '/assets/product-placeholder.svg';

@@ -214,6 +214,8 @@ const AboutPage = () => {
       <section className="py-20 bg-white relative overflow-hidden">
         <div className="absolute inset-0">
           <img 
+            loading="lazy"
+            decoding="async"
             src="/assets/north-peru.jpg" 
             alt="Salinas de Kar & Ma" 
             className="w-full h-full object-cover opacity-10"
@@ -499,6 +501,8 @@ const AboutPage = () => {
                       >
                         <div className="w-20 h-20 mb-4">
                           <img
+                            loading="lazy"
+                            decoding="async"
                             src="/assets/haccp.png"
                             alt="Certificación HACCP"
                             className="w-full h-full object-contain"
@@ -512,6 +516,8 @@ const AboutPage = () => {
                       >
                         <div className="w-20 h-20 mb-4">
                           <img
+                            loading="lazy"
+                            decoding="async"
                             src="/assets/bpm.png"
                             alt="Certificación BPM"
                             className="w-full h-full object-contain"
@@ -523,6 +529,8 @@ const AboutPage = () => {
                   </div>
                   <div className="relative h-full min-h-[300px] rounded-xl overflow-hidden">
                     <img
+                      loading="lazy"
+                      decoding="async"
                       src="/assets/instalaciones.jpg"
                       alt="Instalaciones de Kar & Ma"
                       className="w-full h-full object-cover rounded-xl"

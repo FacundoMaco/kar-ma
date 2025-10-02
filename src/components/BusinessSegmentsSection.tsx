@@ -63,6 +63,8 @@ const BusinessSegmentsSection = () => {
                   <div className="h-48 relative overflow-hidden">
                     {/* Imagen de fondo */}
                     <img 
+                      loading="lazy"
+                      decoding="async"
                       src={segment.image} 
                       alt={segment.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"

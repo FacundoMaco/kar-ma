@@ -47,6 +47,8 @@ const ProductModal = ({ product, isOpen, onClose }: ProductModalProps) => {
           <div className="space-y-4">
             <div className="relative">
               <img
+                loading="lazy"
+                decoding="async"
                 src={product.image || '/assets/product-placeholder.svg'}
                 alt={product.name}
                 className="w-full h-80 object-cover rounded-lg shadow-lg"
