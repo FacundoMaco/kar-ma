@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
+import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
@@ -36,21 +37,23 @@ export const Navbar: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
-            <motion.img
-              src="/assets/kar-ma-logo.png"
-              alt="Kar & Ma"
-              className={cn(
-                'transition-all duration-700 filter brightness-0 invert',
-                isScrolled ? 'w-10 h-10 md:w-12 md:h-12' : 'w-12 h-12 md:w-16 md:h-16'
-              )}
-            />
+            <Link to="/">
+              <motion.img
+                src="/assets/kar-ma-logo.png"
+                alt="Kar & Ma"
+                className={cn(
+                  'transition-all duration-700 filter brightness-0 invert',
+                  isScrolled ? 'w-10 h-10 md:w-12 md:h-12' : 'w-12 h-12 md:w-16 md:h-16'
+                )}
+              />
+            </Link>
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              <NavLink href="#segmentos">Segmentos</NavLink>
-              <NavLink href="#nosotros">Nosotros</NavLink>
-              <NavLink href="#clientes">Clientes</NavLink>
-              <NavLink href="#contacto">Contacto</NavLink>
+              <NavLink href="/segmentos">Segmentos</NavLink>
+              <NavLink href="/nosotros">Nosotros</NavLink>
+              <NavLink href="/clientes">Clientes</NavLink>
+              <NavLink href="/cotizacion">Contacto</NavLink>
             </div>
 
             {/* Mobile Menu Button */}
@@ -81,10 +84,10 @@ export const Navbar: React.FC = () => {
       >
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-col space-y-4">
-            <NavLink href="#segmentos" onClick={() => setIsMobileMenuOpen(false)}>Segmentos</NavLink>
-            <NavLink href="#nosotros" onClick={() => setIsMobileMenuOpen(false)}>Nosotros</NavLink>
-            <NavLink href="#clientes" onClick={() => setIsMobileMenuOpen(false)}>Clientes</NavLink>
-            <NavLink href="#contacto" onClick={() => setIsMobileMenuOpen(false)}>Contacto</NavLink>
+            <NavLink href="/segmentos" onClick={() => setIsMobileMenuOpen(false)}>Segmentos</NavLink>
+            <NavLink href="/nosotros" onClick={() => setIsMobileMenuOpen(false)}>Nosotros</NavLink>
+            <NavLink href="/clientes" onClick={() => setIsMobileMenuOpen(false)}>Clientes</NavLink>
+            <NavLink href="/cotizacion" onClick={() => setIsMobileMenuOpen(false)}>Contacto</NavLink>
           </div>
         </div>
       </motion.div>
@@ -101,15 +104,15 @@ const NavLink: React.FC<{
   children,
   onClick,
 }) => (
-  <motion.a
-    href={href}
-    onClick={onClick}
-    className="text-white hover:text-white/80 font-medium text-lg transition-colors block py-2"
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.95 }}
-  >
-    {children}
-  </motion.a>
+  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+    <Link
+      to={href}
+      onClick={onClick}
+      className="text-white hover:text-white/80 font-medium text-lg transition-colors block py-2"
+    >
+      {children}
+    </Link>
+  </motion.div>
 );
 
 export default Navbar;
