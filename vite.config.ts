@@ -11,7 +11,10 @@ export default defineConfig(({ mode }) => ({
     open: true,
   },
   plugins: [
-    react(),
+    react({
+      jsxRuntime: 'automatic',
+      jsxImportSource: 'react'
+    }),
   ],
   css: {
     devSourcemap: false,
@@ -24,6 +27,8 @@ export default defineConfig(({ mode }) => ({
     include: [
       "react",
       "react-dom",
+      "react/jsx-runtime",
+      "react/jsx-dev-runtime",
       "react-router-dom",
       "framer-motion",
       "motion",
